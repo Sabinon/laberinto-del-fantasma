@@ -59,6 +59,142 @@ controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
         )
     }
 })
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (true) {
+        animation.runImageAnimation(
+        FantasmaPlayer,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f 1 1 1 1 1 f . . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 3 1 1 1 3 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . f c 1 1 1 1 1 1 c f . . . 
+            . . f c c c 1 c f c c c c f . f 
+            . f . f c f c f . f c f f . f . 
+            . . . . f . f . . . f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f 1 1 1 1 1 f . . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 3 1 1 1 3 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . f c 1 1 1 1 1 1 c f . . . 
+            . . f c c c 1 c f c c c c f . f 
+            . f . f c f c f . f c f f . f . 
+            . . . . f . f . . . f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f 1 1 1 1 1 f . . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 3 1 1 1 3 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . f 
+            f . f f c 1 1 1 1 1 1 c f . f . 
+            . f c c c c c c f c c c c f . . 
+            . . f f f f f f . . f f c f f . 
+            . . . f . f . . . . . . f . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f 1 1 1 1 1 f . . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 1 f 1 f 1 1 f . . . 
+            . . . . f 1 3 1 1 1 3 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . . f 1 1 1 1 1 1 1 f . . . 
+            . . . f c 1 1 1 1 1 1 c f . . . 
+            . . f c c c 1 c f c c c c f . f 
+            . f . f c f c f . f c f f . f . 
+            . . . . f . f . . . f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        true
+        )
+    } else {
+        animation.runImageAnimation(
+        FantasmaPlayer,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f c c c c c f . . . . 
+            . . . . f c c 1 f 1 f 1 f . . . 
+            . . . . f c 1 1 f 1 f 1 f . . . 
+            . . . . f c 1 3 1 1 1 3 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c c 1 1 1 1 1 f . . . 
+            . . . . f c c c 1 1 1 1 f . . . 
+            . . . . f c c c f c 1 1 f . . . 
+            . . . . . f c f . f c f . . . . 
+            . . . . . . f . . . f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . f f f f f . . . . . 
+            . . . . . f c c c c c f . . . . 
+            . . . . f c c 1 f 1 f 1 f . . . 
+            . . . . f c 1 1 f 1 f 1 f . . . 
+            . . . . f c 1 3 1 1 1 3 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c c 1 1 1 1 1 f . . . 
+            . . . . f c c c 1 1 1 1 f . . . 
+            . . . . f c c c f c 1 1 f . . . 
+            . . . . . f c f . f c f . . . . 
+            . . . . . . f . . . f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f f . . . . . 
+            . . . . . f c c c c c f . . . . 
+            . . . . f c c 1 f 1 f 1 f . . . 
+            . . . . f c 1 1 f 1 f 1 f . . . 
+            . . . . f c 1 3 1 1 1 3 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 f . . . 
+            . . . . f c 1 1 1 1 1 1 1 f . . 
+            . . . f c c c c 1 1 1 f c f . . 
+            . . f . f c f f c f f . f c f . 
+            . . . . . f . . f . . . . f . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        true
+        )
+    }
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (true) {
         animation.runImageAnimation(
