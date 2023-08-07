@@ -266,6 +266,10 @@ function Terminar_juego () {
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.puerta, function (sprite, otherSprite) {
+    FantasmaPlayer.sayText(":)")
+    info.changeLifeBy(-1)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (true) {
         animation.runImageAnimation(
@@ -923,91 +927,6 @@ function Abrepuerta () {
             c . . . . . . . . . . . . . . c 
             c . . . . . . . . . . . . . . c 
             c . . . . . . . . . . . . . . c 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . 5 5 . . . . . . . 
-            . . . . . . . 5 5 . . . . . . . 
-            . . . . . . 5 . . 5 . . . . . . 
-            . . . . . 5 . . . . 5 . . . . . 
-            . . . . 5 . . . . . . 5 . . . . 
-            . . 5 5 . . . . . . . . 5 . . . 
-            . 5 . . . . . . . . . . . 5 5 . 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . 5 . . 5 . . . . . . 
-            . . . . . 5 5 . . 5 5 . . . . . 
-            . . . . 5 . . . . . . 5 . . . . 
-            . . . 5 . . . . . . . . 5 . . . 
-            . . 5 . . . . . . . . . . 5 . . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . 5 . . . . 5 . . . . . 
-            . . . . 5 . . . . . . 5 . . . . 
-            . . . 5 . . . . . . . . 5 . . . 
-            . . 5 . . . . . . . . . . 5 . . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . 5 . . . . . . . . 5 . . . 
-            . . . 5 . . . . . . . . 5 . . . 
-            . . 5 . . . . . . . . . . 5 . . 
-            . . 5 . . . . . . . . . . 5 . . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            `,img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            . 5 . . . . . . . . . . . . 5 . 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
-            c . . . . . . . . . . . . . . c 
             `],
         500,
         true
@@ -1097,6 +1016,11 @@ function llamas () {
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
+    sprites.destroy(projectile, effects.confetti, 500)
+    info.changeLifeBy(-1)
+    music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (true) {
         animation.runImageAnimation(
@@ -1241,6 +1165,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.FuegoDaño, function (sprite, ot
     music.play(music.melodyPlayable(music.zapped), music.PlaybackMode.UntilDone)
     FantasmaPlayer.sayText("¡Ouch!", 500, false)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+    if (true) {
+        info.setScore(6)
+        sprites.destroyAllSpritesOfKind(SpriteKind.puerta)
+    } else {
+        FantasmaPlayer.sayText("Todavía no puedo pasar.")
+        info.changeLifeBy(-1)
+    }
+})
 info.onLifeZero(function () {
     if (true) {
         game.gameOver(false)
@@ -1251,7 +1184,7 @@ info.onScore(6, function () {
     sprites.destroy(Puerta, effects.confetti, 500)
     music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
     effects.clearParticles(Puerta)
-    sprites.destroyAllSpritesOfKind(SpriteKind.puerta, effects.spray, 500)
+    sprites.destroyAllSpritesOfKind(SpriteKind.puerta, effects.confetti, 500)
 })
 function animacion_de_inicio () {
     animation.runImageAnimation(
@@ -1312,6 +1245,7 @@ function animacion_de_inicio () {
     true
     )
 }
+let projectile: Sprite = null
 let Fuego: Sprite = null
 let Puerta: Sprite = null
 let Gragonmimido: Sprite = null
@@ -1461,7 +1395,7 @@ scene.setBackgroundImage(img`
     `)
 tiles.setCurrentTilemap(tilemap`nivel1`)
 scene.cameraFollowSprite(FantasmaPlayer)
-info.setScore(0)
+info.setScore(6)
 info.setLife(5)
 controller.moveSprite(FantasmaPlayer)
 FantasmaPlayer.sayText("Necesitamos encontrar 6 llaves para salir de aquí.", 5000, false)
@@ -1473,4 +1407,33 @@ Abrepuerta()
 Terminar_juego()
 game.onUpdate(function () {
     FantasmaPlayer.vy = 30
+})
+forever(function () {
+    pause(2000)
+    projectile = sprites.createProjectileFromSide(img`
+        ........................
+        ........................
+        ........................
+        ........................
+        ..........ffff..........
+        ........ff1111ff........
+        .......fb111111bf.......
+        .......f11111111f.......
+        ......fd11111111df......
+        ......fd11111111df......
+        ......fddd1111dddf......
+        ......fbdbfddfbdbf......
+        ......fcdcf11fcdcf......
+        .....ffff111111bf.......
+        ....fc111cdb1bdfff......
+        ....f1b1bcbfbfc111cf....
+        ....fbfbfbffff1b1b1f....
+        .........fffffffbfbf....
+        ..........fffff.........
+        ...........fff..........
+        ........................
+        ........................
+        ........................
+        ........................
+        `, randint(0, 160), randint(0, 120))
 })
