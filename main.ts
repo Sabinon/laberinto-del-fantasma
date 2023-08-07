@@ -266,6 +266,13 @@ function Terminar_juego () {
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.puerta, function (sprite, otherSprite) {
+    FantasmaPlayer.sayText("¡Ya puedo pasar!")
+    sprites.destroy(Puerta, effects.confetti, 500)
+    music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
+    effects.clearParticles(Puerta)
+    sprites.destroyAllSpritesOfKind(SpriteKind.puerta, effects.spray, 500)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (true) {
         animation.runImageAnimation(
@@ -1251,13 +1258,6 @@ info.onLifeZero(function () {
         game.gameOver(false)
     }
 })
-info.onScore(6, function () {
-    FantasmaPlayer.sayText("¡Ya puedo pasar!")
-    sprites.destroy(Puerta, effects.confetti, 500)
-    music.play(music.melodyPlayable(music.powerDown), music.PlaybackMode.UntilDone)
-    effects.clearParticles(Puerta)
-    sprites.destroyAllSpritesOfKind(SpriteKind.puerta, effects.spray, 500)
-})
 function animacion_de_inicio () {
     animation.runImageAnimation(
     FantasmaPlayer,
@@ -1319,9 +1319,9 @@ function animacion_de_inicio () {
 }
 let projectile: Sprite = null
 let Fuego: Sprite = null
-let Puerta: Sprite = null
 let Gragonmimido: Sprite = null
 let LLave1: Sprite = null
+let Puerta: Sprite = null
 let brillooooooo: Sprite = null
 let FantasmaPlayer: Sprite = null
 FantasmaPlayer = sprites.create(img`
@@ -1467,7 +1467,7 @@ scene.setBackgroundImage(img`
     `)
 tiles.setCurrentTilemap(tilemap`nivel1`)
 scene.cameraFollowSprite(FantasmaPlayer)
-info.setScore(0)
+info.setScore(6)
 info.setLife(5)
 controller.moveSprite(FantasmaPlayer)
 FantasmaPlayer.sayText("Necesitamos encontrar 6 llaves para salir de aquí.", 5000, false)
